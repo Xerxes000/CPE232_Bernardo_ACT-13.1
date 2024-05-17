@@ -1,0 +1,35 @@
+---
+- hosts: all
+  become: true
+  roles:
+    - base
+
+- hosts: NTP
+  become: true
+  roles:
+    - NTP
+
+- hosts: OpenStack
+  become: true
+  roles:
+    - OpenStack
+
+- hosts: SQLdb
+  become: true
+  roles:
+    - SQLdb
+
+- hosts: MsgQ
+  become: true
+  roles:
+    - MsgQ
+
+- hosts: Mcache
+  become: true
+  roles:
+    - Mcache
+
+- hosts: Etcd
+  become: true
+  roles:
+    - Etcd
